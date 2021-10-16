@@ -1,4 +1,23 @@
 // Assignment code here
+// prompt length of password 8-28 window.prompt
+// prompt to select criteria what to include
+    // prompt include lowercase window.prompt
+    // prompt include uppercase window.prompt
+    // prompt include numeric window.prompt
+    // prompt include special characters window.prompt
+// validate input with recursive call
+  // var test = function() {
+  //   var response = prompt("Question?");
+  //   if (response === "" || response === null) {
+  //     window.alert("You need to provide a valid answer! Please try again."); 
+  //     test();
+  //   }
+  //   return response;
+  // }
+
+// if all(lowercase uppercase numeric or special) =null.re prompt criteria
+//else generate password
+//display password in the page 
 
 
 // Get references to the #generate element
@@ -15,3 +34,90 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+// Array of special characters to be included in password.
+var specialCharacters = [
+  '@',
+  '%',
+  '+',
+  '\\',
+  '/',
+  "'",
+  '!',
+  '#',
+  '$',
+  '^',
+  '?',
+  ':',
+  ',',
+  ')',
+  '(',
+  '}',
+  '{',
+  ']',
+  '[',
+  '~',
+  '-',
+  '_',
+  '.'
+];
+// Array of numeric characters to be included in password
+var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+// Array of lowercase characters to be included in password
+var lowerCasedCharacters = [
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z'
+];
+// Array of uppercase characters to be included in password
+var upperCasedCharacters = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z'
+];
