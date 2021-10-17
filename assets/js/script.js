@@ -107,10 +107,14 @@ var passwordIncludeSpecial= function () {
 };
 
 var checkAtLeastOne = function (){
-
-if(useLowercase ===false && useUppercase === false && useNumber === false && useSpecial === false){
+console.log("checkatleastone");
+if(useLowercase == false  && useUppercase == false && useNumber == false && useSpecial == false){
   window.alert("You need to choose at least one type of character to include. Please try again. ")
   passwordInclusion();
+}
+else{
+
+window.alert("generating password");
 }
 };
 
