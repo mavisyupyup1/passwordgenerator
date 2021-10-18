@@ -22,6 +22,7 @@ var passwordLength=function () {
     }
     console.log("password length " + length);
 };
+var checkAtLeastOne = function (){
 // ask if user wants to include lowercase letter
 var passwordIncludeLower = function () {
   var passwordLowercase = window.prompt("Would you like include lowercase letter in your password? Enter for \"Yes\" or \"No\"");
@@ -106,7 +107,7 @@ var passwordIncludeSpecial= function () {
   }
 };
 
-var checkAtLeastOne = function (){
+
 console.log("checkatleastone");
 if(useLowercase == false  && useUppercase == false && useNumber == false && useSpecial == false){
   window.alert("You need to choose at least one type of character to include. Please try again. ")
