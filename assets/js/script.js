@@ -9,7 +9,7 @@ checkAtLeastOne();
 });
 // get password length
 var passwordLength=function () {
-  var length = window.prompt("Please enter a number between \"8\" to \"28\" for the length of your password. You can include 8 or 28.");
+  var length = window.prompt("Please enter a number between \"8\" to \"128\" for the length of your password. You can include 8 or 28.");
   //convert answer to actual number
   length = parseInt(length);
     if(length >=8 && length <= 128){
@@ -22,7 +22,7 @@ var passwordLength=function () {
     }
     console.log("password length " + length);
 };
-var checkAtLeastOne = function (){
+
 // ask if user wants to include lowercase letter
 var passwordIncludeLower = function () {
   var passwordLowercase = window.prompt("Would you like include lowercase letter in your password? Enter for \"Yes\" or \"No\"");
@@ -108,19 +108,32 @@ var passwordIncludeSpecial= function () {
 };
 
 
-console.log("checkatleastone");
-if(useLowercase == false  && useUppercase == false && useNumber == false && useSpecial == false){
-  window.alert("You need to choose at least one type of character to include. Please try again. ")
-  passwordInclusion();
-}
-else{
 
-window.alert("generating password");
-}
+var checkAtLeastOne = function (){
+  console.log("checkatleastone");
+  if(useLowercase == false  && useUppercase == false && useNumber == false && useSpecial == false){
+    window.alert("You need to choose at least one type of character to include. Please try again. ")
+    passwordInclusion();
+  }
+  else{
+  
+  window.alert("generating password");
+  generatePassword();
+
+  }
 };
 
 
-var wishlist =[
+//display password in the page 
+
+var generatePassword =function () {
+if(useLowercase === true){
+  mustHaveChars.push('')
+}
+
+}
+
+var mustHaveChars =[
   specialCharacters,
   numericCharacters,
   lowerCasedCharacters,
@@ -172,12 +185,6 @@ var useSpecial = "";
     
 
 
-//display password in the page 
-
-var generatePassword =function () {
-
-
-}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -283,71 +290,71 @@ var upperCasedCharacters = [
 generatePassword();
 
 
-/ Assignment Code
-var generateBtn = document.querySelector("#generate");
-function generatePassword{};
-function getUserOptions{
-  var userChoices = {};
-  //check user options
-  //ask for length
-  var length = prompt("how long would you like your password? 8-28.");
-console.log(length);
-length =parseInt(length);
+// Assignment Code
+// var generateBtn = document.querySelector("#generate");
+// function generatePassword{};
+// function getUserOptions{
+//   var userChoices = {};
+//   //check user options
+//   //ask for length
+//   var length = prompt("how long would you like your password? 8-28.");
+// console.log(length);
+// length =parseInt(length);
 
 
-//ask for uppercase
-var uppercase = confirm("uppercase?.");
-console.log({userChoices.uppercase});
-return userChoices;
-userChoices.uppercase =uppercase;
+// //ask for uppercase
+// var uppercase = confirm("uppercase?.");
+// console.log({userChoices.uppercase});
+// return userChoices;
+// userChoices.uppercase =uppercase;
 
 
 
-// to do validate if is between 8-28;
-// sign to userOptions
-userChoice.uppercase = length;
-console.log (userChoice);
-//ask for uppercase
+// // to do validate if is between 8-28;
+// // sign to userOptions
+// userChoice.uppercase = length;
+// console.log (userChoice);
+// //ask for uppercase
 
-};
-// Write password to the #password input
-function generatePassword(choices){
-  var passwordArray =[];
-  var potentialChars = [];
-  var mustHaveChars = [];
-  // if in options.uppercase === true 
-     // mustHaveChars.push(random from upperCase array)
+// };
+// // Write password to the #password input
+// function generatePassword(choices){
+//   var passwordArray =[];
+//   var potentialChars = [];
+//   var mustHaveChars = [];
+//   // if in options.uppercase === true 
+//      // mustHaveChars.push(random from upperCase array)
    
-     // if in options.lowercase === true 
-     // mustHaveChars.push(random from upperCase array)
+//      // if in options.lowercase === true 
+//      // mustHaveChars.push(random from upperCase array)
      
-   // if in options.number === true 
-     // mustHaveChars.push(random from upperCase array)
+//    // if in options.number === true 
+//      // mustHaveChars.push(random from upperCase array)
      
-   // if in options.special=== true 
-     // mustHaveChars.push(random from upperCase array)
+//    // if in options.special=== true 
+//      // mustHaveChars.push(random from upperCase array)
   
 
-    // push form  potentialChars to password array
+//     // push form  potentialChars to password array
 
-       // loop to the length of the length of password
-        // replace for each one in the passwordArray;
+//        // loop to the length of the length of password
+//         // replace for each one in the passwordArray;
 
-        //join the array to string
+//         //join the array to string
         
 
-}
-function writePassword() {
-  // get user options
-  var userOptions = getUserOptions();
+// }
+// function writePassword() {
+//   // get user options
+//   var userOptions = getUserOptions();
 
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
 
