@@ -57,7 +57,7 @@ var passwordInclude = function () {
     passwordInclude();
   }else{
   window.alert("generating password");
-
+  
 };
 
 var generatePassword =function(){
