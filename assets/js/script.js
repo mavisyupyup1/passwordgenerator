@@ -63,13 +63,13 @@ function generatePassword(){
 }
 //what type of characters to include
 function passwordInclude(){
-  passwordLowercase = window.confirm("Click OK to include lowercase letter in your password.");
+  passwordLowercase = window.confirm("Click OK to include lowercase letter in your password.Click cancel for No.");
   console.log(passwordLowercase);
-   passwordUppercase = window.confirm("Click Ok to include UPPERCASE letter in your password.");
+   passwordUppercase = window.confirm("Click Ok to include UPPERCASE letter in your password.Click cancel for No.");
    console.log(passwordUppercase);
-   passwordNumber= window.confirm("Click Ok to include numbers in your password.");
+   passwordNumber= window.confirm("Click Ok to include numbers in your password.Click cancel for No.");
    console.log(passwordNumber);
-  passwordSpecial= window.confirm("Click OK include Special symbols in your password");
+  passwordSpecial= window.confirm("Click OK to include  special symbols in your password. Click cancel for No.");
   console.log(passwordSpecial);
   // validate -- if none is checked ask again
   if(!(passwordLowercase||passwordUppercase||passwordNumber||passwordSpecial)){
