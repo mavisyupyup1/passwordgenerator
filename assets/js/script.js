@@ -15,10 +15,20 @@ var generatePassword=function () {
   var chooseLength = window.prompt("Please enter a number between \"8\" to \"128\" for the chooseLength of your password. You can include 8 or 128.");
   //convert answer to actual number
   chooseLength = parseInt(chooseLength);
- // validate answer
-  if (!chooseLength ||chooseLength <8 || chooseLength >128){ 
+
+  if (!chooseLength ||){ 
     window.alert("You did not enter a valid number. Try again.");
-  } else{
+  }
+  else if (){
+    alert ()
+  }
+    if(chooseLength >=8 && chooseLength <= 128){
+      window.alert("Great! Your password will have " + chooseLength +" characters in chooseLength.")
+     console.log(chooseLength);
+    passwordInclude ();
+    } 
+    // validate answer
+    else{
 var passwordInclude =function (){
 // ask if user wants to include lowercase letter
   var passwordLowercase = window.confirm("Would you like include lowercase letter in your password? Enter Ok for Yes and Cancel for No.");
