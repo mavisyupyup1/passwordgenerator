@@ -21,12 +21,16 @@ function generatePassword(){
   //then ask what type of characters to include
   passwordInclude();
   //generating password
-  //declare functions to generate random values in each category
-  
-  var randomSpecial = () => special[random(0,special.length)];
-  var randomNumber = () =>random(0,9);
-  var randomUppercase = () =>uppercase[random(0,uppercase.length)]; 
-  var randomLowercase = () =>lowercase[random(0,lowercase.length)];
+  //declare functions to generate a random value in each category
+  var randomSpecial = function(){return special[random(0,special.length)];}
+  //console log to see what's been generated
+  console.log(randomSpecial());
+  var randomNumber = function(){ return random(0,9);}
+  console.log(randomNumber());
+  var randomUppercase = function(){ return uppercase[random(0,uppercase.length)]; }
+  console.log(randomUppercase());
+  var randomLowercase = function(){return lowercase[random(0,lowercase.length)];}
+  console.log(randomLowercase());
   //create an array char[]to hold the function to push a random character of the selected type. if lowercase is true then array include () =>lowercase[random(0,lowercase.length)
   const char =[];
   //if passwordLowercase true, char[] includes 
@@ -48,14 +52,14 @@ function generatePassword(){
   //consolelog to make sure this is correct
   console.log(passwordLength);
   //create placeholder variable for password
-  let result = '';
+  let password = '';
   // for loop to generate the chosen length from array;
-  for (let i = 0; i <= passwordLength; i++) {
-    result += char[random(0,char.length)]();   
+  for (let i = 0; i <= passwordLength-1; i++) {
+    password += char[random(0,char.length)]();   
   }
   //check the generated password
-  console.log(result);
-  return result;
+  console.log(password);
+  return password;
 }
 //what type of characters to include
 function passwordInclude(){
@@ -88,15 +92,23 @@ function chooseLength(){
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+//get references to #copy element
+var copyBtn=document.querySelector("#copy");
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+}
 
+//copy to clipboard function
+function copyPassword(){
+  document.getElementById("password").select();
+  document.execCommand("Copy");
+  alert("Password copied to clipboard");
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", function(){generatePassword();});
+generateBtn.addEventListener("click", writePassword);
+copyBtn.addEventListener("click", copyPassword);
