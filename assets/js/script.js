@@ -15,8 +15,8 @@ const randomUppercase = uppercase[random(0,uppercase.length)];
 console.log(randomUppercase);
 const randomLowercase = lowercase[random(0,lowercase.length)];
 console.log(randomLowercase);
-var chooseLength = parseInt(prompt("Please enter a number between \"8\" to \"128\" for the chooseLength of your password. You can include 8 or 128."));
-console.log(chooseLength);
+
+
 var passwordLowercase = window.confirm("Click OK to include lowercase letter in your password.");
 console.log(passwordLowercase);
  var passwordUppercase = window.confirm("Click Ok to include UPPERCASE letter in your password.");
@@ -26,20 +26,24 @@ console.log(passwordLowercase);
 var passwordSpecial= window.confirm("Click OK include Special symbols in your password");
 console.log(passwordSpecial);
 function test() {
-    const char ="";
+    const char =[];
     if (passwordLowercase) char.push(randomLowercase);
     console.log("HI"+passwordLowercase);
     console.log("HI"+randomLowercase);
     if (passwordUppercase) char.push(randomUppercase);
+    console.log("HI"+passwordUppercase);
+    console.log("HI"+randomUppercase);
+
     if (passwordNumber) char.push(randomNumber);
     if(passwordSpecial) char.push (randomSpecial)
     console.log(randomSpecial);
-    const passwordLength = chooseLength;
-    console.log(chooseLength);
-    var result ='';
-    for (var i =0; i < passwordLength; i++){
+    var chooseLength = parseInt(prompt("Please enter a number between \"8\" to \"128\" for the chooseLength of your password. You can include 8 or 128."));
+    console.log(char);
+    const cleanLength =  chooseLength;
+    console.log(cleanLength);
+    let result = '';
+    for (let i = 0; i < cleanLength; i++) {
       result += char[random(0,char.length)]();
-    console.log(result);
     }
   };
     
