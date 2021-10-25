@@ -9,7 +9,17 @@ The application is for an employee to generate a random password based on select
 * JavaScript
 
 ## Screenshots
-![screenshot1](assets/images/ScreenShot0.png)
+* Initial Screen
+![screenshot0](assets/images/ScreenShot0.png)
+* Input length
+![screenshot1](assets/images/ScreenShot1.png)
+* Select type to include
+![screenshot2](assets/images/ScreenShot2.png)
+* Generate password
+![screenshot3](assets/images/ScreenShot3.png)
+* Copy to clipboard
+![screenshot4](assets/images/ScreenShot4.png)
+
 ## Website
 https://mavisyupyup1.github.io/passwordgenerator/
 
