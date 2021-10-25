@@ -8,6 +8,8 @@ The application is for an employee to generate a random password based on select
 * CSS
 * JavaScript
 
+## Screenshots
+![screenshot1](assets/images/ScreenShot0.png)
 ## Website
 https://mavisyupyup1.github.io/passwordgenerator/
 
